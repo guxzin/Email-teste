@@ -5,11 +5,12 @@ import lombok.Data;
 import lombok.Generated;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
 @Entity
-public class EmailModel {
+public class EmailModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
