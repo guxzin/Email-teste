@@ -22,12 +22,12 @@ public class EmailDTO {
     private String emailPara;
 
     @NotBlank
-    private String assunto;
+    private String emailAssunto;
 
     @NotBlank
     private String telefone;
 
     @NotBlank
-    private String texto;
+    private String emailTexto;
 
 }

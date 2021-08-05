@@ -15,14 +15,14 @@ public class EmailModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long emailId;
+
+    //informações do email
+
     private String remetente;
     private String emailDe;
     private String emailPara;
-    private String assunto;
-    private String telefone;
-
-    @Column(columnDefinition = "TEXT")
-    private String texto;
+    private String emailAssunto;
+    private String emailTexto;
     private LocalDateTime dataDeEnvio;
     private StatusEmail statusEmail ;
 

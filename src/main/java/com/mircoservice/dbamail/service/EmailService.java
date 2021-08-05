@@ -24,10 +24,11 @@ public class EmailService {
         emailModel.setDataDeEnvio(LocalDateTime.now());
         try{
             SimpleMailMessage mensagem = new SimpleMailMessage();
+
             mensagem.setFrom(emailModel.getEmailDe());
             mensagem.setTo(emailModel.getEmailPara());
-            mensagem.setSubject(emailModel.getAssunto());
-            mensagem.setText(emailModel.getTexto());
+            mensagem.setSubject(emailModel.getEmailAssunto());
+            mensagem.setText(emailModel.getEmailTexto());
             emailSender.send(mensagem);
 
             emailModel.setStatusEmail(StatusEmail.SENT);
